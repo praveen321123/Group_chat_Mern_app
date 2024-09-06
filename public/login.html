@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form method="POST" action="/login">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    const form = document.querySelector('form')
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+          if (username) {
+            localStorage.setItem('username', username);
+            window.location.href = '/';
+          }
+      });
+  </script>
+</body>
+</html>
