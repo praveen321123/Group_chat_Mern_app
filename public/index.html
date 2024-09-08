@@ -2,18 +2,19 @@
 <html>
 <head>
   <title>Chat Room</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Group Chat</h1>
-  
-  <form method="post" action="/send-message">
-    <input type="hidden" name="username" id="username" value="">
-    <label for="message">Message:</label>
-    <input type="text" id="message" name="message" required>
-    <button type="submit">Send</button>
-  </form>
-
-  <div id="chat-box"></div>
+  <main class="container">
+    <h1>Group Chat</h1>
+    <form method="post" action="/send-message">
+      <input type="hidden" name="username" id="username" value="">
+      <label for="message"><b>Message:</b></label><br>
+      <input type="text" id="message" name="message" required>
+      <button type="submit">Send</button>
+    </form>
+    <div id="chat-box"></div>
+  </main>
 
   <script>
     const username = localStorage.getItem('username');
@@ -24,20 +25,18 @@
     }
 
     function loadMessages() {
-      fetch('/messages')
-        .then(response => response.json())
-        .then(messages => {
-          const chatBox = document.getElementById('chat-box');
-          chatBox.innerHTML = '';
-          messages.forEach(msg => {
-            const div = document.createElement('div');
-            div.textContent = `${msg.username}: ${msg.message}`;
-            chatBox.appendChild(div);
-          });
+      fetch('/messages').then(response => response.json())
+      .then(messages => {
+        const chatBox = document.getElementById('chat-box');
+        chatBox.innerHTML = '';
+        messages.forEach(msg => {
+          const h2 = document.createElement('h2');
+          h2.innerHTML = `<span class="chat-msg">${msg.username}</span> : ${msg.message}`;
+          chatBox.appendChild(h2);
         });
+      });
     }
-    
-    setInterval(loadMessages, 3000);
+    setInterval(loadMessages, 2000);
   </script>
 </body>
 </html>

@@ -2,25 +2,28 @@
 <html>
 <head>
   <title>Login</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Login</h1>
-  <form method="POST" action="/login">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    <button type="submit">Login</button>
-  </form>
+  <main class="container">
+    <h1>Login to chat</h1>
+    <form method="POST" action="/login">
+      <label for="username"><b>Username:</b></label><br>
+      <input type="text" id="username" name="username" required><br><br>
+      <button type="submit">Login</button>
+    </form>
+  </main>
 
   <script>
     const form = document.querySelector('form')
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const username = document.getElementById('username').value;
-          if (username) {
-            localStorage.setItem('username', username);
-            window.location.href = '/';
-          }
-      });
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      if (username) {
+        localStorage.setItem('username', username);
+        window.location.href = '/';
+      }
+    });
   </script>
 </body>
 </html>

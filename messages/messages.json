@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "username": "Praveen S",
+    "message": "Happy ganesh chadhurthi"
+  },
+  {
+    "username": "Praveen S",
+    "message": "hello world"
+  },
+  {
+    "username": "Adharsh",
+    "message": "Happy ganesh chadhurthi da praveen"
+  },
+  {
+    "username": "Adharsh",
+    "message": "hello world"
+  },
+  {
+    "username": "Adharsh",
+    "message": "apple"
+  },
+  {
+    "username": "Praveen",
+    "message": "Sparky"
+  },
+  {
+    "username": "Praveen",
+    "message": "Helo"
+  },
+  {
+    "username": "Adharsh",
+    "message": "apple"
+  },
+  {
+    "username": "Adharsh",
+    "message": "Sparky"
+  }
+]

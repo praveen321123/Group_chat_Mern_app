@@ -1,0 +1,61 @@
+/* Scroll Bar Styles */
+::-webkit-scrollbar{
+  width: 9px;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(transparent, rgb(1, 255, 179)60%);
+  border-radius: 6px;
+}
+
+html{
+  background-color: cadetblue;
+}
+
+body{
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container h1{
+  display: flex;
+  justify-content: center;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#eee, #42e8e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+b{
+  color: white;
+  font-size: large;
+}
+input[type=text] {
+  background-color: #3fd79f;
+  color: white;
+  font-size: larger;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  height: 40px;
+  outline: none;
+}
+input[type=text]:focus {
+  border: 1px solid #0bf396;
+}
+.chat-msg{
+  color: white;
+}
+button{
+  padding: 8px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover{
+  background-color: #3fd79f;
+  color: white;
+}
+button:active{
+  background-color: #ff0000;
+}
